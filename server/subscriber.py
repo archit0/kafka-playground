@@ -8,7 +8,7 @@ def task(key, value):
 
 
 WORKER_TOPIC_MAPPING = {
-    'SAMPLE_TOPIC': task,
+    'SAMPLE_TOPIC3': task,
 }
 
 
@@ -20,7 +20,7 @@ def consume():
 
     consumer = KafkaConsumer(
         *list(WORKER_TOPIC_MAPPING.keys()),
-        bootstrap_servers=['kafka:9092'],
+        bootstrap_servers=['kafka:29092'],
         group_id='GROUP1',
         enable_auto_commit=False,
         security_protocol='PLAINTEXT',
